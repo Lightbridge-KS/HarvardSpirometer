@@ -12,12 +12,13 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
-    learnr,
     here,
     glue,
     ggplot2,
     latex2exp,
     markdown,
-    rslab (>= 0.0.0.9000)
-Remotes:  
+    rslab (>= 0.0.0.9000),
+    shiny,
+    bslib
+Remotes: 
     Lightbridge-KS/rslab
