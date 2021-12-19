@@ -61,7 +61,7 @@ plot_Harvard_tracing <- function(f = "cos",
 # Mod: plot_Harvard_tracing UI -----------------------------------------------------------------
 plot_Harvard_tracing_UI <- function(id) {
   ns <- NS(id)
-  tabPanel("Simulate Tracing",
+  tabPanel(tags$span(fa("chart-line"), "Simulate Tracing"),
            sidebarLayout(
              sidebarPanel(
                h3("Respiratory Parameters"),
