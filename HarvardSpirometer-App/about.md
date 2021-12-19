@@ -10,4 +10,4 @@ About
 -   **Contact:** [kittipos.sir@mahidol.edu](kittipos.sir@mahidol.edu)
 
 -   **Source code** is available in
-    [github](https://github.com/Lightbridge-KS/MetRateTutorial)
+    [github](https://github.com/Lightbridge-KS/HarvardSpirometer)

@@ -16,5 +16,5 @@ library(fontawesome)
 
 -   **Contact:** [kittipos.sir\@mahidol.edu](kittipos.sir@mahidol.edu)
 
--   **Source code** is available in [github](https://github.com/Lightbridge-KS/MetRateTutorial)
+-   **Source code** is available in [github](https://github.com/Lightbridge-KS/HarvardSpirometer)
 
