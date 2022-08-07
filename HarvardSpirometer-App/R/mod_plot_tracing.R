@@ -2,6 +2,7 @@
 library(shiny)
 library(rslab)
 
+library(fontawesome)
 
 # Function: Plot Harvard Tracing ------------------------------------------
 
@@ -38,7 +39,7 @@ plot_Harvard_tracing <- function(f = "cos",
     NULL
   }
 
-  df_sim %>%
+  df_sim |>
     ggplot2::ggplot() +
     # Waves
     ggplot2::geom_path(ggplot2::aes(x, y)) +
