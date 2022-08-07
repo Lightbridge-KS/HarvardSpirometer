@@ -1,0 +1,50 @@
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  # to be able to trigger a manual build
+  workflow_dispatch:
+
+name: shiny-deploy
+
+jobs:
+  shiny-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+
+      - name: Set up R Environment
+        uses: r-lib/actions/setup-renv@v2 # Installs packages from renv lockfile
+        with:
+          cache-version: 1
+
+      - name: Install {rsconnect}
+        run: |
+          renv::install("rsconnect")
+        shell: Rscript {0}
+
+      # If not use {renv}, uncomment below
+      #
+      # - name: Setup R
+      #   uses: r-lib/actions/setup-r@v2
+      # - name: Install {rsconnect} and {quarto}
+      #   uses: r-lib/actions/setup-r-dependencies@v2
+      #   with:
+      #      packages: |
+      #        rsconnect
+      #        quarto
+      #      dependencies: '"hard"'
+
+      - name: Authorize and Deploy Shiny App 🚀
+        env:
+        # Uncomment below and add account name and app name to deploy
+          APP_DIR: HarvardSpirometer-App
+          APP_NAME: harvard-spirometer
+          ACCOUNT: kittipos
+          SERVER: shinyapps.io
+        run: |
+          rsconnect::setAccountInfo("${{ secrets.RSCONNECT_USER }}", "${{ secrets.RSCONNECT_TOKEN }}", "${{ secrets.RSCONNECT_SECRET }}")
+          rsconnect::deployApp(appDir = "${{ env.APP_DIR }}", appName = "${{ env.APP_NAME }}", account = "${{ env.ACCOUNT }}", server = "${{ env.SERVER }}")
+        shell: Rscript {0}
