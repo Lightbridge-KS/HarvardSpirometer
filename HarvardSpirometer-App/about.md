@@ -3,6 +3,10 @@ About
 
 > This web application simulates a Harvard spirometer tracing.
 
+### Modeling
+
+Please visit [this article](https://lightbridge-ks.github.io/rslab/articles/mod-tracing.html) for the underlying mathematic model used in this calculator.
+
 ### Developer
 
 -   **Author & Maintainer:** Kittipos Sirivongrungson, MD
