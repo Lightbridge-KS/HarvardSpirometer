@@ -1,7 +1,10 @@
 ### Module: Plot Tracing
+
+#| External PKG
+#| remotes::install_github("Lightbridge-KS/rslab")
+
 library(shiny)
 library(rslab)
-
 library(fontawesome)
 
 # Function: Plot Harvard Tracing ------------------------------------------
