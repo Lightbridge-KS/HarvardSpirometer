@@ -5,9 +5,7 @@ account: kittipos
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5332146
-bundleId: 5390492
+bundleId: 6175932
 url: https://kittipos.shinyapps.io/harvard-spirometer/
-when: 1639927326.47525
-lastSyncTime: 1639927326.47527
-asMultiple: FALSE
-asStatic: FALSE
+when: 1659853493.29229
+lastSyncTime: 1659853493.2923
